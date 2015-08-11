@@ -13,14 +13,20 @@ namespace dockTeste
 {
     public partial class MainForm : Form
     {
-        FChange fc1 = new FChange();
-        FTreeview ftree = new FTreeview();
+
+        FTreeview ftree = null;
 
         public MainForm()
         {
             InitializeComponent();
-            fc1.Show(dockPanel, DockState.Document);
+
+            ftree = new FTreeview(this);
             ftree.Show(dockPanel, DockState.DockLeftAutoHide);
+        }
+
+        public DockPanel mainDock 
+        {
+            get { return this.dockPanel; }
         }
     }
 }

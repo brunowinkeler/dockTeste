@@ -28,53 +28,55 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Azul");
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Vermelho");
-            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Amarelo");
-            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Cores", new System.Windows.Forms.TreeNode[] {
-            treeNode1,
-            treeNode2,
-            treeNode3});
-            this.treeView1 = new System.Windows.Forms.TreeView();
+            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Azul");
+            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Vermelho");
+            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Amarelo");
+            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Cores", new System.Windows.Forms.TreeNode[] {
+            treeNode5,
+            treeNode6,
+            treeNode7});
+            this.treeViewCores = new System.Windows.Forms.TreeView();
             this.SuspendLayout();
             // 
-            // treeView1
+            // treeViewCores
             // 
-            this.treeView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.treeView1.Location = new System.Drawing.Point(0, 0);
-            this.treeView1.Name = "treeView1";
-            treeNode1.BackColor = System.Drawing.Color.Blue;
-            treeNode1.Name = "Azul";
-            treeNode1.Text = "Azul";
-            treeNode2.BackColor = System.Drawing.Color.Red;
-            treeNode2.Name = "Vermelho";
-            treeNode2.Text = "Vermelho";
-            treeNode3.BackColor = System.Drawing.Color.Yellow;
-            treeNode3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            treeNode3.Name = "Amarelo";
-            treeNode3.Text = "Amarelo";
-            treeNode4.Name = "Cores";
-            treeNode4.Text = "Cores";
-            this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode4});
-            this.treeView1.Size = new System.Drawing.Size(295, 280);
-            this.treeView1.TabIndex = 0;
+            this.treeViewCores.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.treeViewCores.Location = new System.Drawing.Point(0, 0);
+            this.treeViewCores.Name = "treeViewCores";
+            treeNode5.BackColor = System.Drawing.Color.Blue;
+            treeNode5.Name = "Azul";
+            treeNode5.Text = "Azul";
+            treeNode6.BackColor = System.Drawing.Color.Red;
+            treeNode6.Name = "Vermelho";
+            treeNode6.Text = "Vermelho";
+            treeNode7.BackColor = System.Drawing.Color.Yellow;
+            treeNode7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            treeNode7.Name = "Amarelo";
+            treeNode7.Text = "Amarelo";
+            treeNode8.Name = "Cores";
+            treeNode8.Text = "Cores";
+            this.treeViewCores.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
+            treeNode8});
+            this.treeViewCores.Size = new System.Drawing.Size(295, 280);
+            this.treeViewCores.TabIndex = 0;
+            this.treeViewCores.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.treeViewCores_NodeMouseClick);
             // 
             // FTreeview
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(295, 280);
-            this.Controls.Add(this.treeView1);
+            this.Controls.Add(this.treeViewCores);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "FTreeview";
             this.Text = "FTreeview";
+            this.MouseLeave += new System.EventHandler(this.FTreeview_MouseLeave);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TreeView treeView1;
+        private System.Windows.Forms.TreeView treeViewCores;
     }
 }
